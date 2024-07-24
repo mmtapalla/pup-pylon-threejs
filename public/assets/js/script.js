@@ -10,7 +10,7 @@ renderer.setClearColor(0x000000);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 
 document.body.appendChild(renderer.domElement);
 
@@ -35,8 +35,8 @@ controls.autoRotate = true;
 controls.autoRotateSpeed = -10;
 controls.target = new THREE.Vector3(0, 1, 0);
 controls.update();
+const loader = new GLTFLoader().setPath("../models/");
 
-const loader = new GLTFLoader().setPath("/assets/models/");
 loader.load(
     "scene.gltf",
     (gltf) => {
