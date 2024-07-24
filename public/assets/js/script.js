@@ -36,7 +36,7 @@ controls.autoRotateSpeed = -10;
 controls.target = new THREE.Vector3(0, 1, 0);
 controls.update();
 
-const loader = new GLTFLoader().setPath("public/assets/models/");
+const loader = new GLTFLoader().setPath("/public/assets/models/");
 loader.load(
     "scene.gltf",
     (gltf) => {
